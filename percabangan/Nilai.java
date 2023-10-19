@@ -6,10 +6,10 @@ public class Nilai {
         Double nilai;
         String indeksNilai;
 
-        Scanner inputan = new Scanner(System.in);
-        System.out.print("Masukan nilai: ");
-        nilai = inputan.nextDouble();
-
+        try (Scanner inputan = new Scanner(System.in)) {
+            System.out.print("Masukan nilai: ");
+            nilai = inputan.nextDouble();
+        }
         if (nilai >= 75) {
             indeksNilai = "A";
         } else if (nilai >= 65) {
